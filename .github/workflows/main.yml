@@ -15,7 +15,7 @@ env:
   RENAMED_REPO_BRANCH : bookworm
   PACKAGING_REPO_BRANCH : bookworm-halium-10
   PACKAGES_DIR : ${{ github.workspace }}/packages
-  PACKAGING_DIR : ${{ github.workspace }}/linux-android-xiaomi-jasmine-sprout-packaging
+  PACKAGING_DIR : ${{ github.workspace }}/linux-android-xiaomi-wayne-packaging
   KERNEL_REPO_URL : https://github.com/Droidian-Mi-A2-6X/linux-android-xiaomi-wayne-jasmine
   PACKAGING_REPO_URL : https://github.com/Droidian-Mi-A2-6X/linux-android-xiaomi-wayne-packaging
   KERNEL_DIR : ${{ github.workspace }}/kernel/$VENDOR/$MODEL
