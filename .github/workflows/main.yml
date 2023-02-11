@@ -16,7 +16,7 @@ env:
   PACKAGING_REPO_BRANCH : bookworm
   PACKAGES_DIR : ${{ github.workspace }}/packages
   PACKAGING_DIR : ${{ github.workspace }}/linux-android-xiaomi-wayne-packaging
-  KERNEL_REPO_URL : https://github.com/Droidian-Mi-A2-6X/linux-android-xiaomi-wayne-jasmine
+  KERNEL_REPO_URL : https://github.com/wochgn/linux-android-xiaomi-wayne-jasmine
   PACKAGING_REPO_URL : https://github.com/Droidian-Mi-A2-6X/linux-android-xiaomi-wayne-packaging
   KERNEL_DIR : ${{ github.workspace }}/kernel/$VENDOR/$MODEL
   GH_TOKEN : ${{ secrets.GITHUB_TOKEN }}
