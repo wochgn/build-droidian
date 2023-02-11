@@ -11,9 +11,9 @@ on:
 env:
   VENDOR : xiaomi
   MODEL : wayne
-  KERNEL_REPO_BRANCH : bookworm-10
+  KERNEL_REPO_BRANCH : bullseye-9
   RENAMED_REPO_BRANCH : bookworm
-  PACKAGING_REPO_BRANCH : bookworm-halium-10
+  PACKAGING_REPO_BRANCH : bookworm
   PACKAGES_DIR : ${{ github.workspace }}/packages
   PACKAGING_DIR : ${{ github.workspace }}/linux-android-xiaomi-wayne-packaging
   KERNEL_REPO_URL : https://github.com/Droidian-Mi-A2-6X/linux-android-xiaomi-wayne-jasmine
