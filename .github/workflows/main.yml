@@ -11,9 +11,9 @@ on:
 env:
   VENDOR : xiaomi
   MODEL : wayne
-  KERNEL_REPO_BRANCH : bullseye-9
-  RENAMED_REPO_BRANCH : bullseye
-  PACKAGING_REPO_BRANCH : bullseye
+  KERNEL_REPO_BRANCH : bookworm-10
+  RENAMED_REPO_BRANCH : bookworm
+  PACKAGING_REPO_BRANCH : bookworm
   PACKAGES_DIR : ${{ github.workspace }}/packages
   PACKAGING_DIR : ${{ github.workspace }}/linux-android-xiaomi-wayne-packaging
   KERNEL_REPO_URL : https://github.com/wochgn/linux-android-xiaomi-wayne-jasmine
@@ -32,7 +32,7 @@ jobs:
         run: |
              mkdir -p ${{ env.PACKAGES_DIR }}
              git clone ${{env.KERNEL_REPO_URL}} -b ${{env.KERNEL_REPO_BRANCH}} ${{env.KERNEL_DIR}} --depth=1 && git -C ${{env.KERNEL_DIR}} checkout -b ${{env.RENAMED_REPO_BRANCH}} && git clone ${{env.PACKAGING_REPO_URL}} -b ${{env.PACKAGING_REPO_BRANCH}}
-             docker run --rm -v $PACKAGES_DIR:/buildd -v ${{env.KERNEL_DIR}}:/buildd/sources -v ${{env.PACKAGING_DIR}}:/buildd/sources/debian quay.io/droidian/build-essential:bullseye-amd64 bash -c "cd /buildd/sources && RELENG_HOST_ARCH="arm64" releng-build-package"
+             docker run --rm -v $PACKAGES_DIR:/buildd -v ${{env.KERNEL_DIR}}:/buildd/sources -v ${{env.PACKAGING_DIR}}:/buildd/sources/debian quay.io/droidian/build-essential:bookworm-amd64 bash -c "cd /buildd/sources && RELENG_HOST_ARCH="arm64" releng-build-package"
              zip -r packages.zip $PACKAGES_DIR
 
       - name: Release
